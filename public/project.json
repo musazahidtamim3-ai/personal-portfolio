@@ -1,0 +1,88 @@
+[
+     {
+          "id": 1,
+          "title": "Booknest Platform",
+          "description": "An authantication based book borrowing application built with Next.js, BetterAuth and Tailwind CSS, featuring light mode and smooth animations. User can update her profile and login or signup so easily with google. ",
+          "techStack": [
+               "Next.js",
+               "MongoDb",
+               "BetterAuth"          ],
+          "features": [
+               "Dynamic Book Exploration: Users can view books by category and see detailed information including author, ratings, and descriptions.",
+               "Secure Authentication: Integrated with Better Auth for secure email/password and Google/GitHub social logins.",
+               "Book Borrowing System: Users can borrow books easily.",
+               "Interactive UI: Smooth animations using Animate.css and responsive design for mobile, tablet, and desktop.",
+               "Real-time Search & Filtering: Find books quickly by title or category.",
+               "Personal Dashboard: Users can see their borrowed books and manage their profiles."
+          ],
+          "image": "/booknes.png",
+          "photo": "/booknes-details.png",
+          "liveLink": "https://booknest-platform.vercel.app/",
+          "githubLink": "https://github.com/musazahidtamim3-ai/booknest-platform",
+          "category": "Web Development"
+     },
+     {
+          "id": 2,
+          "title": "KeenKeeper",
+          "description": "KeenKeeper is a personal relationship management tool designed to help users nurture and maintain meaningful connections with friends and family. In a fast-paced digital world, it’s easy to lose track of the last time we reached out to someone. KinKeeper serves as a personal shelf for your relationships, ensuring no one important gets left behind.",
+          "techStack": [
+               "React",
+               "Node.js",
+               "MongoDB"
+          ],
+          "features": [
+               "Relationship Dashboard: A high-level overview showing total connections, those who are 'On Track', and those who 'Need Attention' based on contact frequency.",
+
+"Dynamic Friendship Timeline: A detailed history of interactions (Calls, Texts, Video Chats) that can be filtered by activity type to track how you spend your time with others.",
+
+"Engagement Analytics: Integrated visual statistics using Recharts, providing a Pie Chart breakdown of interaction types to help users understand their communication patterns."
+          ],
+          "image": "/keenkeeper.png",
+          "photo": "/booknes-details.png",
+          "liveLink": "https://keen-keeper-two-chi.vercel.app/",
+          "githubLink": "https://github.com/musazahidtamim3-ai/keen-keeper",
+          "category": "Full Stack"
+     },
+     {
+          "id": 3,
+          "title": "Digitools Platform",
+          "description": "This is a curated digital marketplace that offers premium AI-powered writing tools, design templates, and automation kits through a modern, responsive interface. It features a dynamic pricing system and a seamless Add to Cart experience, designed to help creators and professionals scale their productivity with ease.",
+          "techStack": [
+               "TypeScript",
+               "OpenAI API",
+               "PostgreSQL"
+          ],
+          "features": [
+              "By clicking Cart, the cart section will be shown. By default it will show an empty message. By Clicking Product, the Products section will be shown.",
+"Used react toastify to show all the alerts of add to cart, remove, and proceed to checkout.",
+"On Click Remove Button product will remove from cart section and Proceed to checkout button will remove all the products from the cart"
+          ],
+          "image": "/digitools.png",
+          "photo": "/booknes-details.png",
+          "liveLink": "https://digitools-black.vercel.app/",
+          "githubLink": "https://github.com/musazahidtamim3-ai/digitools",
+          "category": "AI/ML"
+     },
+     {
+          "id": 4,
+          "title": "Gusto Plate",
+          "description": "A modern, responsive food delivery web application built with React and Tailwind CSS. Features include a dynamic menu, real-time cart management, and seamless order feedback integration.",
+          "techStack": [
+               "TypeScript",
+               "OpenAI API",
+               "PostgreSQL"
+          ],
+          "features": [
+               "Dynamic Menu & Filtering: An interactive food menu with category-based filtering (e.g., Bangla, Burger, Drinks) and a modern, responsive UI.",
+
+"Smart Cart Management: Real-time, state-based cart system with instant quantity tracking, duplicate item prevention, and seamless 'Add/Remove' functionality.",
+
+"Modern UX & Notifications: Sleek glassmorphism design using Tailwind CSS, featuring professional dark-themed Toast notifications for user actions and feedback."
+          ],
+          "image": "/gusto.png",
+                    "photo": "/booknes-details.png",
+          "liveLink": "https://gusto-plate.vercel.app/",
+          "githubLink": "https://github.com/musazahidtamim3-ai/Gusto-Plate",
+          "category": "AI/ML"
+     }
+]
