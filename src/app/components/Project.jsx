@@ -6,7 +6,7 @@ import { IoIosRocket } from 'react-icons/io';
 
 const Project = async () => {
      // API Call
-     const res = await fetch("http://localhost:3000/project.json", { cache: 'no-store' });
+     const res = await fetch("https://personal-portfolio-seven-pied.vercel.app/project.json", { cache: 'no-store' });
      const projects = await res.json();
 
      return (

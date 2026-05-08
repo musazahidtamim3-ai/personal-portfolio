@@ -10,7 +10,7 @@ const ProjectDetailsPage = async ({ params }) => {
      const { id } = await params;
 
      // প্রোডাকশনে localhost এর জায়গায় আপনার ডোমেইন বা env ভেরিয়েবল ব্যবহার করবেন
-     const res = await fetch("http://localhost:3000/project.json", { cache: 'no-store' });
+     const res = await fetch("https://personal-portfolio-seven-pied.vercel.app/project.json", { cache: 'no-store' });
      const projects = await res.json();
      const project = projects.find(p => p.id.toString() === id);
 
