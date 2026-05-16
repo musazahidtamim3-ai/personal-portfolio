@@ -23,8 +23,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${inter.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
-        {/* পুরো চিলড্রেনকে লোডিং প্রোভাইডার দিয়ে র‍্যাপ (Wrap) করা হয়েছে */}
+      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100 overflow-x-hidden">
         <LoadingProvider>
           {children}
         </LoadingProvider>

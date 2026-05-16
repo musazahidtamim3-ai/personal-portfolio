@@ -20,3 +20,14 @@ global {
      }
 
 }
+html,
+body {
+     max-width: 100vw;
+     overflow-x: hidden;
+}
+
+main,
+section,
+div {
+     max-width: 100%;
+}
