@@ -22,7 +22,6 @@ const cardVariants = {
      }
 };
 
-// গ্রিড কন্টেইনার অ্যানিমেশন
 export const ClientAnimationWrapper = ({ children }) => {
      return (
           <motion.div
@@ -32,7 +31,6 @@ export const ClientAnimationWrapper = ({ children }) => {
                whileInView="visible"
                viewport={{ once: true, amount: 0.1 }}
           >
-               {/* ক্লায়েন্ট সাইড থেকে গ্লোবাল অ্যানিমেশন ইনজেক্ট করা হচ্ছে */}
                <style jsx global>{`
                     @keyframes border-rotate {
                          100% { transform: rotate(360deg); }
@@ -46,14 +44,13 @@ export const ClientAnimationWrapper = ({ children }) => {
      );
 };
 
-// ইন্ডিভিজুয়াল প্রজেক্ট কার্ড অ্যানিমেশন
 export const ClientCardWrapper = ({ children }) => {
      return (
           <motion.div
                variants={cardVariants}
                whileHover={{ y: -5 }}
                whileTap={{ scale: 0.98 }}
-               className='group relative p-[1.5px] rounded-xl overflow-hidden flex flex-col items-center justify-center transition-all duration-300 bg-slate-900/50 shadow-lg'
+               className='group relative rounded-2xl overflow-hidden flex flex-col items-center justify-center transition-all duration-300 w-full h-full'
           >
                {children}
           </motion.div>

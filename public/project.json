@@ -1,88 +1,82 @@
 [
      {
           "id": 1,
-          "title": "Booknest Platform",
-          "description": "An authantication based book borrowing application built with Next.js, BetterAuth and Tailwind CSS, featuring light mode and smooth animations. User can update her profile and login or signup so easily with google. ",
-          "techStack": [
+          "projectName": "Daily Life Lessons",
+          "bannerImage": "/daily-life.png",
+          "technologiesUsed": [
                "Next.js",
-               "MongoDb",
-               "BetterAuth"          ],
-          "features": [
-               "Dynamic Book Exploration: Users can view books by category and see detailed information including author, ratings, and descriptions.",
-               "Secure Authentication: Integrated with Better Auth for secure email/password and Google/GitHub social logins.",
-               "Book Borrowing System: Users can borrow books easily.",
-               "Interactive UI: Smooth animations using Animate.css and responsive design for mobile, tablet, and desktop.",
-               "Real-time Search & Filtering: Find books quickly by title or category.",
-               "Personal Dashboard: Users can see their borrowed books and manage their profiles."
+               "Tailwind CSS",
+               "MongoDB",
+               "BetterAuth",
+               "Express.js",
+               "Framer Motion"
           ],
-          "image": "/booknes.png",
-          "photo": "/booknes-details.png",
-          "liveLink": "https://booknest-platform.vercel.app/",
-          "githubLink": "https://github.com/musazahidtamim3-ai/booknest-platform",
-          "category": "Web Development"
+          "briefDescription": "Daily Life Lessons is an interactive knowledge-sharing platform designed to help users document, reflect on, and share valuable life lessons, productivity tips, and personal growth insights with a global community.",
+          "liveLink": "https://daily-life-client.vercel.app/",
+          "githubClient": "https://github.com/musazahidtamim3-ai/daily-life-client",
+          "challenges": [
+               "Implementing Stripe payment gateway for secure online payments.",
+               "Managing complex client-side state during real-time post interactions and bookmarking.",
+               "Make authentication secure and implement role based authentication"
+          ],
+          "futureImprovements": [
+               "Add AI-powered personal lesson recommendation engine.",
+               "Integrate audio lesson recording and playback capability.",
+               "Implement local payment gateway like bkash, Nagad etc."
+          ]
      },
      {
           "id": 2,
-          "title": "KeenKeeper",
-          "description": "KeenKeeper is a personal relationship management tool designed to help users nurture and maintain meaningful connections with friends and family. In a fast-paced digital world, it’s easy to lose track of the last time we reached out to someone. KinKeeper serves as a personal shelf for your relationships, ensuring no one important gets left behind.",
-          "techStack": [
-               "React",
-               "Node.js",
-               "MongoDB"
+          "projectName": "Reports Zone",
+          "bannerImage": "/digitools.png",
+          "technologiesUsed": [
+               "Next.js",
+               "TypeScript",
+               "Express.js",
+               "MongoDB",
+               "Tailwind CSS",
+               "Recharts",
+               "JWT"
           ],
-          "features": [
-               "Relationship Dashboard: A high-level overview showing total connections, those who are 'On Track', and those who 'Need Attention' based on contact frequency.",
-
-"Dynamic Friendship Timeline: A detailed history of interactions (Calls, Texts, Video Chats) that can be filtered by activity type to track how you spend your time with others.",
-
-"Engagement Analytics: Integrated visual statistics using Recharts, providing a Pie Chart breakdown of interaction types to help users understand their communication patterns."
+          "briefDescription": "Reports Zone is an automated analytical and reporting dashboard that allows businesses to aggregate operational metrics, generate visual charts, and export PDF/Excel summary reports seamlessly.",
+          "liveLink": "https://reports-zone.vercel.app",
+          "githubClient": "https://github.com/your-username/reports-zone-client",
+          "challenges": [
+               "Processing large datasets efficiently on the backend without causing UI freeze during chart rendering.",
+               "Ensuring precise layout fidelity when exporting dynamic charts and tables to downloadable PDF files.",
+               "Configuring strict role-based access control (RBAC) for Admin and User permissions."
           ],
-          "image": "/keenkeeper.png",
-          "photo": "/booknes-details.png",
-          "liveLink": "https://keen-keeper-two-chi.vercel.app/",
-          "githubLink": "https://github.com/musazahidtamim3-ai/keen-keeper",
-          "category": "Full Stack"
+          "futureImprovements": [
+               "Implement scheduled automated email delivery for weekly/monthly PDF reports.",
+               "Integrate WebSocket support for live data streaming and real-time updates.",
+               "Add custom drag-and-drop dashboard widget customization."
+          ]
      },
      {
           "id": 3,
-          "title": "Digitools Platform",
-          "description": "This is a curated digital marketplace that offers premium AI-powered writing tools, design templates, and automation kits through a modern, responsive interface. It features a dynamic pricing system and a seamless Add to Cart experience, designed to help creators and professionals scale their productivity with ease.",
-          "techStack": [
+          "projectName": "Doc Appoint",
+          "bannerImage": "/keenkeeper.png",
+          "technologiesUsed": [
+               "React.js",
+               "Next.js",
                "TypeScript",
-               "OpenAI API",
-               "PostgreSQL"
+               "Tailwind CSS",
+               "Node.js",
+               "MongoDB",
+               "Stripe"
           ],
-          "features": [
-              "By clicking Cart, the cart section will be shown. By default it will show an empty message. By Clicking Product, the Products section will be shown.",
-"Used react toastify to show all the alerts of add to cart, remove, and proceed to checkout.",
-"On Click Remove Button product will remove from cart section and Proceed to checkout button will remove all the products from the cart"
+          "briefDescription": "Doc Appoint is a modern healthcare portal connecting patients with specialized doctors. Users can search specialists, book real-time appointment slots, and process secure consultation payments online.",
+          "liveLink": "https://doc-appoint.vercel.app",
+          "githubClient": "https://github.com/your-username/doc-appoint-client",
+          "challenges": [
+               "Preventing double-booking of doctor time slots using MongoDB atomic operations and transactions.",
+               "Handling Stripe payment webhook notifications reliably to update appointment statuses instantly.",
+               "Designing an intuitive timezone-aware date/time picker for flexible scheduling."
           ],
-          "image": "/digitools.png",
-          "photo": "/booknes-details.png",
-          "liveLink": "https://digitools-black.vercel.app/",
-          "githubLink": "https://github.com/musazahidtamim3-ai/digitools",
-          "category": "AI/ML"
-     },
-     {
-          "id": 4,
-          "title": "Gusto Plate",
-          "description": "A modern, responsive food delivery web application built with React and Tailwind CSS. Features include a dynamic menu, real-time cart management, and seamless order feedback integration.",
-          "techStack": [
-               "TypeScript",
-               "OpenAI API",
-               "PostgreSQL"
-          ],
-          "features": [
-               "Dynamic Menu & Filtering: An interactive food menu with category-based filtering (e.g., Bangla, Burger, Drinks) and a modern, responsive UI.",
-
-"Smart Cart Management: Real-time, state-based cart system with instant quantity tracking, duplicate item prevention, and seamless 'Add/Remove' functionality.",
-
-"Modern UX & Notifications: Sleek glassmorphism design using Tailwind CSS, featuring professional dark-themed Toast notifications for user actions and feedback."
-          ],
-          "image": "/gusto.png",
-                    "photo": "/booknes-details.png",
-          "liveLink": "https://gusto-plate.vercel.app/",
-          "githubLink": "https://github.com/musazahidtamim3-ai/Gusto-Plate",
-          "category": "AI/ML"
+          "futureImprovements": [
+               "Integrate WebRTC for in-app direct video consultation between doctor and patient.",
+               "Add automated SMS and WhatsApp appointment reminders via Twilio.",
+               "Implement digital prescription generation and medical history storage system."
+          ]
      }
 ]

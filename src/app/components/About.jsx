@@ -1,111 +1,127 @@
 "use client";
-import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaRegUser } from 'react-icons/fa';
-import { FiGlobe, FiPhone } from 'react-icons/fi';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
-import { IoMailOutline } from 'react-icons/io5';
-import { MdDateRange } from 'react-icons/md';
+import { FaRegUser, FaMapMarkerAlt, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { useTheme } from '../ThemeContext';
 
 const About = () => {
-     const infoDetails = [
-          { icon: <FaRegUser />, label: 'Name', value: 'MD. Jahidul Islam' },
-          { icon: <IoMailOutline />, label: 'Email', value: 'musazahidtamim3@gmail.com' },
-          { icon: <HiOutlineLocationMarker />, label: 'Location', value: 'Feni, Bangladesh' },
-          { icon: <MdDateRange />, label: 'Date of Birth', value: '24 June 2006' },
-          { icon: <FiPhone />, label: 'Phone', value: '+880 1818490324' },
-          { icon: <FiGlobe />, label: 'Languages', value: 'English, Bangla' },
+     const { isDark } = useTheme();
+     const [mounted, setMounted] = useState(false);
+
+     useEffect(() => {
+          setMounted(true);
+     }, []);
+
+     if (!mounted) return null;
+
+     const leftInfo = [
+          { icon: <FaRegUser />, label: 'Full Name', value: 'MD. Jahidul Islam' },
+          { icon: <FaMapMarkerAlt />, label: 'Location', value: 'Feni, Bangladesh' },
      ];
 
-     // Mobile friendly staggered animation setup
-     const containerVariants = {
-          hidden: { opacity: 0 },
-          visible: {
-               opacity: 1,
-               transition: { staggerChildren: 0.1, delayChildren: 0.05 }
-          }
-     };
-
-     const itemVariants = {
-          hidden: { opacity: 0, y: 20 }, // মোবাইলের জন্য y এক্সিস ৩০ থেকে কমিয়ে ২০ করা হয়েছে যাতে মসৃণ লাগে
-          visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-     };
+     const rightInfo = [
+          { icon: <FaEnvelope />, label: 'Email', value: 'musazahidtamim3@gmail.com' },
+          { icon: <FaGlobe />, label: 'Languages', value: 'English, Bangla' },
+     ];
 
      return (
-          <section id='about' className='max-w-7xl my-16 lg:my-32 mx-auto grid grid-cols-1 lg:grid-cols-6 gap-10 lg:gap-16 px-6 lg:px-12 items-center relative overflow-hidden'>
+          <section
+               id='about'
+               className={`w-full py-16 sm:py-24 transition-colors duration-300 relative overflow-hidden ${isDark ? 'bg-[#0a0a0f] text-slate-100' : 'bg-slate-50 text-slate-900'
+                    }`}
+          >
+               {/* Ambient Glow */}
+               <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[280px] rounded-full blur-[130px] pointer-events-none z-0 ${isDark ? 'bg-purple-600/15' : 'bg-purple-400/20'
+                    }`}></div>
 
-               {/* Decorative Background Light Burst */}
-               <div className='absolute bottom-0 right-0 w-80 h-80 bg-[#00F5D4]/5 rounded-full blur-[120px] pointer-events-none'></div>
+               <div className='max-w-7xl mx-auto px-6 sm:px-8 relative z-10'>
 
-               {/* Left Section - Image Section (col-span-2) */}
-               <motion.div
-                    className='lg:col-span-2 flex justify-center w-full'
-                    initial={{ opacity: 0, y: 30 }} // মোবাইলে সাইড থেকে আসার চেয়ে নিচ থেকে আসা বেশি সুন্দর দেখায়
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }} // amount: 0.2 মানে স্ক্রিনে ২০% আসা মাত্রই অ্যানিমেশন শুরু হবে (মোবাইলের জন্য বেস্ট)
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-               >
-                    <div className='relative group w-72 lg:w-full max-w-[320px] aspect-square lg:aspect-auto lg:h-[400px]'>
-                         <div className='absolute -inset-2 bg-gradient-to-tr from-[#00F5D4] to-transparent rounded-2xl opacity-20 blur-xl group-hover:opacity-40 transition duration-700'></div>
+                    {/* Section Header */}
+                    <motion.div
+                         initial={{ opacity: 0, y: 15 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         viewport={{ once: true }}
+                         transition={{ duration: 0.4 }}
+                         className='text-center mb-8'
+                    >
+                         <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-3 border ${isDark
+                                   ? 'bg-purple-500/10 border-purple-500/30 text-purple-300'
+                                   : 'bg-purple-100 border-purple-200 text-purple-700'
+                              }`}>
+                              About Me
+                         </span>
+                         <h2 className={`text-2xl lg:text-4xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                              Crafting Digital Products With <span className='bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent'>Passion & Precision</span>
+                         </h2>
+                    </motion.div>
 
-                         <div className='absolute inset-0 rounded-2xl bg-gradient-to-b from-[#00F5D4]/40 to-transparent p-[1.5px] group-hover:from-[#00F5D4] transition-all duration-500'>
-                              <div className='w-full h-full bg-slate-950 rounded-2xl overflow-hidden relative'>
-                                   <Image
-                                        src="/aboutHero.png"
-                                        alt="MD. Jahidul Islam"
-                                        height={600}
-                                        width={600}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                        priority
-                                   />
-                              </div>
-                         </div>
-                    </div>
-               </motion.div>
+                    {/* Expanded & Highlighted Story Content */}
+                    <motion.div
+                         initial={{ opacity: 0, y: 15 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         viewport={{ once: true }}
+                         transition={{ duration: 0.4, delay: 0.1 }}
+                         className={` rounded-2xl text-sm sm:text-base leading-relaxed ${isDark ? ' text-slate-300' : ' text-slate-700'
+                              }`}
+                    >
+                         <p className='text-justify sm:text-left space-y-4'>
+                              Hello! I am <span className='font-bold text-purple-500 dark:text-purple-400'>MD. Jahidul Islam</span>, a dedicated web developer based in Feni, Bangladesh. My programming journey began with a strong curiosity to understand how software applications and complex web platforms operate seamlessly behind the scenes. What started as basic experimentation with foundational coding concepts quickly turned into a genuine passion for creating scalable, modern web solutions.
+                              <br /><br />
+                              In my daily workflow, I specialize in <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>Full Stack Web Development</span>—building end-to-end applications that prioritize functionality and performant user experiences. I deeply enjoy diving into algorithmic logic through <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>Problem Solving</span>, as well as crafting clean, responsive, and aesthetically pleasing <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>UI/UX Designs</span>.
+                              <br /><br />
+                              As a professional, I define myself as a <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>curious learner</span>, an effective <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>team player</span>, a <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>fast learner</span>, and a highly <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>self-motivated engineer</span> who thrives on solving real-world technological challenges. When I am away from my code editor, I like to recharge my mind by <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>reading books</span>, <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>playing football</span>, and continuously <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>learning new technologies</span> to stay updated with industry trends.
+                         </p>
+                    </motion.div>
 
-               {/* Right Section - Content Section (col-span-4) */}
-               <motion.div
-                    className='lg:col-span-4'
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }} // মোবাইল স্ক্রিনের সামান্য ছোঁয়া লাগলেই কন্টেন্ট ভেসে উঠবে
-               >
-                    <motion.span variants={itemVariants} className='inline-block text-[#00F5D4] font-semibold tracking-widest uppercase text-xs bg-[#00F5D4]/10 px-3 py-1.5 rounded-md border border-[#00F5D4]/20 mb-4'>
-                         About Me
-                    </motion.span>
+                    {/* 2-Column Split Information Card */}
+                    <motion.div
+                         initial={{ opacity: 0, y: 15 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         viewport={{ once: true }}
+                         transition={{ duration: 0.4, delay: 0.2 }}
+                         className='mt-10'
+                    >
+                         <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 relative'>
+                              {/* Divider Line */}
+                              <div className={`hidden sm:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[1px] ${isDark ? 'bg-slate-800' : 'bg-slate-200'
+                                   }`}></div>
 
-                    <motion.h2 variants={itemVariants} className='text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight'>
-                         Get to Know me <span className='bg-gradient-to-r from-[#00F5D4] to-[#0284c7] bg-clip-text text-transparent'>better</span>
-                    </motion.h2>
-
-                    <motion.p variants={itemVariants} className='text-slate-400 pt-4 text-sm lg:text-base leading-relaxed font-normal max-w-3xl'>
-                         I am a creator, a problem-solver, and a lifelong learner. With a focus on turning ideas into reality, I specialize in crafting experiences that are not only functional but also visually compelling. My journey is driven by a curiosity to explore new technologies and a desire to build things that matter.
-                    </motion.p>
-
-                    {/* Info Cards Grid */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8'>
-                         {infoDetails.map((info, index) => (
-                              <motion.div
-                                   key={index}
-                                   variants={itemVariants}
-                                   whileHover={{ y: -4, borderColor: "rgba(0, 245, 212, 0.4)" }}
-                                   whileTap={{ scale: 0.98 }} // মোবাইলে টাচ করলে হালকা দেবে যাওয়ার ইফেক্ট (Haptic feel)
-                                   className='flex flex-col gap-2 p-4 bg-slate-900/40 border border-slate-800/80 backdrop-blur-md rounded-xl transition-all duration-300'
-                              >
-                                   <div className='flex items-center gap-2.5 text-[#00F5D4]'>
-                                        <div className='p-1.5 bg-[#00F5D4]/10 rounded-lg border border-[#00F5D4]/10'>
-                                             {React.cloneElement(info.icon, { className: 'w-4 h-4' })}
+                              {/* Left Column */}
+                              <div className='space-y-4'>
+                                   {leftInfo.map((item, idx) => (
+                                        <div key={idx} className='flex items-center gap-3.5'>
+                                             <div className={`p-2.5 rounded-xl border text-purple-500 ${isDark ? 'bg-purple-950/40 border-purple-500/30' : 'bg-purple-50 border-purple-200'
+                                                  }`}>
+                                                  {item.icon}
+                                             </div>
+                                             <div>
+                                                  <p className={`text-[10px] uppercase font-bold tracking-wider ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{item.label}</p>
+                                                  <p className={`text-sm font-semibold ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>{item.value}</p>
+                                             </div>
                                         </div>
-                                        <span className='text-[11px] font-bold uppercase tracking-widest text-slate-400'>{info.label}</span>
-                                   </div>
-                                   <p className='text-slate-200 text-sm font-medium pl-0.5 break-words'>{info.value}</p>
-                              </motion.div>
-                         ))}
-                    </div>
-               </motion.div>
+                                   ))}
+                              </div>
 
+                              {/* Right Column */}
+                              <div className='space-y-4 sm:pl-4'>
+                                   {rightInfo.map((item, idx) => (
+                                        <div key={idx} className='flex items-center gap-3.5'>
+                                             <div className={`p-2.5 rounded-xl border text-purple-500 ${isDark ? 'bg-purple-950/40 border-purple-500/30' : 'bg-purple-50 border-purple-200'
+                                                  }`}>
+                                                  {item.icon}
+                                             </div>
+                                             <div>
+                                                  <p className={`text-[10px] uppercase font-bold tracking-wider ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{item.label}</p>
+                                                  <p className={`text-sm font-semibold ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>{item.value}</p>
+                                             </div>
+                                        </div>
+                                   ))}
+                              </div>
+
+                         </div>
+                    </motion.div>
+
+               </div>
           </section>
      );
 };

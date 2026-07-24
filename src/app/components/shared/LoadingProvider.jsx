@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import GlobalLoader from './GlobalLoader'; // আপনার গ্লোবাল লোডারের সঠিক পাথ দিন
+import GlobalLoader from './GlobalLoader';
 
 export default function LoadingProvider({ children }) {
      const [isLoading, setIsLoading] = useState(true);
