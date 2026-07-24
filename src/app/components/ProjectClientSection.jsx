@@ -16,11 +16,9 @@ const ProjectContent = ({ projects }) => {
                className={`w-full py-16 lg:py-28 relative overflow-hidden transition-colors duration-500 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
                     }`}
           >
-               {/* 💜 Top-Right Purple Glow Overlay */}
                <div className={`absolute -top-10 -right-10 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none transition-all duration-500 ${isDark ? 'bg-purple-600/20' : 'bg-purple-400/25'
                     }`} />
 
-               {/* 💜 Bottom-Left Purple Glow Overlay */}
                <div className={`absolute -bottom-10 -left-10 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none transition-all duration-500 ${isDark ? 'bg-indigo-600/20' : 'bg-purple-300/35'
                     }`} />
 
@@ -40,7 +38,7 @@ const ProjectContent = ({ projects }) => {
                          </span>
                          <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight max-w-2xl mx-auto ${isDark ? 'text-white' : 'text-slate-900'
                               }`}>
-                              Some of My <span className='bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent'>Recent Works</span>
+                              Some of My <span className='bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent'>Recent Works</span>
                          </h2>
                     </div>
 
@@ -55,7 +53,6 @@ const ProjectContent = ({ projects }) => {
                                              : 'bg-white/90 backdrop-blur-sm border-purple-100 hover:border-purple-300 shadow-md hover:shadow-xl'
                                         }`}>
 
-                                        {/* CONTINUOUS ROTATING BORDER LIGHT (শুধুমাত্র ডার্ক মোডে চালু থাকবে) */}
                                         {isDark && (
                                              <div className='absolute inset-[-200%] bg-[conic-gradient(from_0deg,transparent_40%,#A855F7_70%,#EC4899_85%,transparent_100%)] animate-border-spin pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-300' />
                                         )}

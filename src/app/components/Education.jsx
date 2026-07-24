@@ -68,9 +68,9 @@ const EducationTimeline = () => {
                               }`}>
                               Education
                          </span>
-                         <h2 className={`text-3xl lg:text-4xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'
+                         <h2 className={`text-2xl lg:text-4xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'
                               }`}>
-                              My Educational <span className='bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 bg-clip-text text-transparent'>Qualification</span>
+                              My Educational <span className='bg-gradient-to-r from-purple-600 to-indigo-600  bg-clip-text text-transparent'>Qualification</span>
                          </h2>
                     </div>
 

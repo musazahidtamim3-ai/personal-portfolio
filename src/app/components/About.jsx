@@ -27,7 +27,7 @@ const About = () => {
      return (
           <section
                id='about'
-               className={`w-full py-16 sm:py-24 transition-colors duration-300 relative overflow-hidden ${isDark ? 'bg-[#0a0a0f] text-slate-100' : 'bg-slate-50 text-slate-900'
+               className={`w-full px-2 lg:px-6 py-16 sm:py-24 transition-colors duration-300 relative overflow-hidden ${isDark ? 'bg-[#0a0a0f] text-slate-100' : 'bg-slate-50 text-slate-900'
                     }`}
           >
                {/* Ambient Glow */}
@@ -51,7 +51,7 @@ const About = () => {
                               About Me
                          </span>
                          <h2 className={`text-2xl lg:text-4xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                              Crafting Digital Products With <span className='bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent'>Passion & Precision</span>
+                              Know This Man <span className='bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent'>Behind The Code</span>
                          </h2>
                     </motion.div>
 
@@ -65,7 +65,7 @@ const About = () => {
                               }`}
                     >
                          <p className='text-justify sm:text-left space-y-4'>
-                              Hello! I am <span className='font-bold text-purple-500 dark:text-purple-400'>MD. Jahidul Islam</span>, a dedicated web developer based in Feni, Bangladesh. My programming journey began with a strong curiosity to understand how software applications and complex web platforms operate seamlessly behind the scenes. What started as basic experimentation with foundational coding concepts quickly turned into a genuine passion for creating scalable, modern web solutions.
+                              Hello! I am <span className='font-bold text-purple-500 dark:text-purple-400'>MD. Jahidul Islam</span>, a dedicated web developer based in Feni, Bangladesh. Currently, I am studying in <span className='text-purple-300 font-bold'>computer science and technology</span> at Feni Polytechnic Institute. My programming journey began with a strong curiosity to understand how software applications and complex web platforms operate seamlessly behind the scenes. What started as basic experimentation with foundational coding concepts quickly turned into a genuine passion for creating scalable, modern web solutions.
                               <br /><br />
                               In my daily workflow, I specialize in <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>Full Stack Web Development</span>—building end-to-end applications that prioritize functionality and performant user experiences. I deeply enjoy diving into algorithmic logic through <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>Problem Solving</span>, as well as crafting clean, responsive, and aesthetically pleasing <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>UI/UX Designs</span>.
                               <br /><br />

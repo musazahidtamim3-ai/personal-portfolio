@@ -2,13 +2,14 @@
      {
           "id": 1,
           "projectName": "Daily Life Lessons",
-          "bannerImage": "/daily-life.png",
+          "bannerImage": "/daily-life-lessons-01.png",
           "technologiesUsed": [
                "Next.js",
                "Tailwind CSS",
                "MongoDB",
                "BetterAuth",
                "Express.js",
+               "Stripe",
                "Framer Motion"
           ],
           "briefDescription": "Daily Life Lessons is an interactive knowledge-sharing platform designed to help users document, reflect on, and share valuable life lessons, productivity tips, and personal growth insights with a global community.",
@@ -28,53 +29,50 @@
      {
           "id": 2,
           "projectName": "Reports Zone",
-          "bannerImage": "/digitools.png",
+          "bannerImage": "/reports-zone-01.png",
           "technologiesUsed": [
                "Next.js",
                "TypeScript",
                "Express.js",
                "MongoDB",
                "Tailwind CSS",
-               "Recharts",
-               "JWT"
+               "Recharts"
           ],
-          "briefDescription": "Reports Zone is an automated analytical and reporting dashboard that allows businesses to aggregate operational metrics, generate visual charts, and export PDF/Excel summary reports seamlessly.",
-          "liveLink": "https://reports-zone.vercel.app",
-          "githubClient": "https://github.com/your-username/reports-zone-client",
+          "briefDescription": "Reports Zone is a web application where users can reports any local problems, issues likes load-shedding, network-overload, and many more. It is an automated analytical and reporting dashboard that allows businesses to aggregate operational metrics and generate visual charts.",
+          "liveLink": "https://reports-zone-app.vercel.app/",
+          "githubClient": "https://github.com/musazahidtamim3-ai/reports-zone-app",
           "challenges": [
                "Processing large datasets efficiently on the backend without causing UI freeze during chart rendering.",
-               "Ensuring precise layout fidelity when exporting dynamic charts and tables to downloadable PDF files.",
-               "Configuring strict role-based access control (RBAC) for Admin and User permissions."
+               "Ensuring user can add report perfectly without any errors.",
+               "Implement secure authentication by using betterauth"
           ],
           "futureImprovements": [
-               "Implement scheduled automated email delivery for weekly/monthly PDF reports.",
-               "Integrate WebSocket support for live data streaming and real-time updates.",
-               "Add custom drag-and-drop dashboard widget customization."
+               "Implement strict role based access control system",
+               "Make sure user can contact developer team for any issues.",
+               "Add custom drag-and-drop image for report"
           ]
      },
      {
           "id": 3,
           "projectName": "Doc Appoint",
-          "bannerImage": "/keenkeeper.png",
+          "bannerImage": "/doc-appoint-01.png",
           "technologiesUsed": [
                "React.js",
                "Next.js",
-               "TypeScript",
                "Tailwind CSS",
-               "Node.js",
-               "MongoDB",
-               "Stripe"
+               "Express.js",
+               "MongoDB"
           ],
-          "briefDescription": "Doc Appoint is a modern healthcare portal connecting patients with specialized doctors. Users can search specialists, book real-time appointment slots, and process secure consultation payments online.",
+          "briefDescription": "Doc Appoint is a modern healthcare portal connecting patients with specialized doctors. Users can search specialists, book real-time appointment of the doctors. They can edit and delete their appointment",
           "liveLink": "https://doc-appoint.vercel.app",
-          "githubClient": "https://github.com/your-username/doc-appoint-client",
+          "githubClient": "https://github.com/musazahidtamim3-ai/doc-appoint-client",
           "challenges": [
-               "Preventing double-booking of doctor time slots using MongoDB atomic operations and transactions.",
-               "Handling Stripe payment webhook notifications reliably to update appointment statuses instantly.",
-               "Designing an intuitive timezone-aware date/time picker for flexible scheduling."
+               "Make sure that user can edit or delete their appointment.",
+               "Make sure Users can get doctors by searching their name",
+               "Make sure that, once user booked an appointment, modal will close automatically"
           ],
           "futureImprovements": [
-               "Integrate WebRTC for in-app direct video consultation between doctor and patient.",
+               "Preventing Double appointment for a doctor at once",
                "Add automated SMS and WhatsApp appointment reminders via Twilio.",
                "Implement digital prescription generation and medical history storage system."
           ]

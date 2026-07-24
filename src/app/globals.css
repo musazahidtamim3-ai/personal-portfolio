@@ -1,29 +1,31 @@
 @import "tailwindcss";
 @plugin "daisyui";
-global {
-     @keyframes float {
-          0% {
-               transform: translateY(0px);
-          }
 
-          50% {
-               transform: translateY(-20px);
-          }
-
-          100% {
-               transform: translateY(0px);
-          }
+/* Keyframe Animations */
+@keyframes float {
+     0% {
+          transform: translateY(0px);
      }
 
-     .animate-float {
-          animation: float 6s ease-in-out infinite;
+     50% {
+          transform: translateY(-20px);
      }
 
+     100% {
+          transform: translateY(0px);
+     }
 }
+
+.animate-float {
+     animation: float 6s ease-in-out infinite;
+}
+
+/* Fix Sticky Positioning & Horizontal Overflow */
 html,
 body {
-     max-width: 100vw;
-     overflow-x: hidden;
+     width: 100%;
+     overflow-x: clip;
+     /* hidden এর বদলে clip দিলে ডানে-বামে স্ক্রোল হবে না এবং sticky ও কাজ করবে */
 }
 
 main,

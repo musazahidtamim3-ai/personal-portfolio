@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa';
 import { FaCircleDot } from 'react-icons/fa6';
 import { GoDownload } from 'react-icons/go';
 import { IoMailOutline } from 'react-icons/io5';
@@ -22,6 +22,14 @@ const Hero = () => {
      const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
      const [displayedText, setDisplayedText] = useState("");
      const [isDeleting, setIsDeleting] = useState(false);
+
+     const scrollToSection = (id) => {
+          const element = document.getElementById(id);
+          if (element) {
+               element.scrollIntoView({ behavior: 'smooth' });
+               setOpen(false);
+          }
+     };
 
      useEffect(() => {
           const targetText = roles[currentRoleIndex];
@@ -57,9 +65,8 @@ const Hero = () => {
 
      const socialLinks = [
           { icon: <FaGithub />, link: "https://github.com/musazahidtamim3-ai" },
-          { icon: <FaLinkedin />, link: "#" },
-          { icon: <FaFacebook />, link: "#" },
-          { icon: <FaTwitter />, link: "#" },
+          { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/jahidul-islam-dev" },
+          { icon: <FaFacebook />, link: "https://www.facebook.com/share/19GwUyCVyF/" },
      ];
 
      return (
@@ -131,8 +138,9 @@ const Hero = () => {
                                    </button>
                               </Link>
 
-                              <a href="#contact">
-                                   <button
+
+                              <button
+                                   onClick={() => scrollToSection('contact')}
                                         className={`px-6 py-3.5 border font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2 text-sm uppercase tracking-wider ${isDark
                                              ? 'bg-slate-900/60 border-slate-800 hover:border-purple-500/50 text-slate-200 hover:text-purple-300'
                                              : 'bg-white border-slate-300 hover:border-purple-400 text-slate-700 hover:text-purple-600'
@@ -141,7 +149,6 @@ const Hero = () => {
                                         <IoMailOutline className='w-4 h-4' />
                                         Contact Me
                                    </button>
-                              </a>
                          </motion.div>
 
                          <motion.div variants={itemVariants} className='flex items-center gap-4 mt-8 border-slate-800/20'>
@@ -191,7 +198,7 @@ const Hero = () => {
 
                          {/* 3. Main Modern Squircle Frame (Rounded Polygon Look) */}
                          <motion.div
-                              className="relative w-64 sm:w-80 lg:w-[380px] h-64 sm:h-80 lg:h-[380px] rounded-[40px] sm:rounded-[50px] p-[3px] bg-gradient-to-br from-purple-500 via-indigo-500/40 to-pink-500/30 shadow-[0_0_50px_rgba(139,92,246,0.15)] overflow-hidden"
+                              className="relative w-64 sm:w-80 lg:w-[380px] h-64 sm:h-80 lg:h-[380px] rounded-[40px] sm:rounded-[50px] p-[3px] bg-gradient-to-br from-purple-200 via-indigo-500/40 to-pink-500/30 shadow-[0_0_50px_rgba(139,92,246,0.15)] overflow-hidden"
                               animate={{ y: [0, -8, 0] }}
                               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                          >
@@ -204,7 +211,7 @@ const Hero = () => {
                                         alt="Mohammed Jahidul Islam"
                                         height={500}
                                         width={500}
-                                        className="object-cover translate-y-2 transition-all duration-500 group-hover:scale-[1.04] origin-bottom drop-shadow-[0_0_25px_rgba(168,85,247,0.65)]"
+                                        className="object-cover translate-y-2  origin-bottom drop-shadow-[0_0_25px_rgba(168,85,247,0.45)]"
                                         priority
                                    />
                               </div>

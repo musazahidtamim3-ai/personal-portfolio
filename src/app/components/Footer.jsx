@@ -1,7 +1,8 @@
 "use client"
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowUp } from 'react-icons/fa';
-import { useTheme } from '../ThemeContext'; // আপনার থিম ফাইলের সঠিক পাথ দিন
+import { FaGithub, FaLinkedin, FaArrowUp, FaFacebook } from 'react-icons/fa';
+import { useTheme } from '../ThemeContext';
+import Image from 'next/image';
 
 const Footer = () => {
      const { isDark } = useTheme();
@@ -24,9 +25,16 @@ const Footer = () => {
 
                          {/* Left Side: Name & Tagline */}
                          <div className='text-left flex flex-col justify-center h-full'>
-                              <h2 className={`text-2xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                                   Jahidul <span className='bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent'>Islam</span>
-                              </h2>
+                              {/* Brand Logo / Name */}
+                                                       <div className='flex items-center gap-3'>
+                                                            <Image
+                                                                 src={`/main-logo.png`}
+                                                                 alt='logo'
+                                                                 height={45}
+                                                                 width={65}
+                                                                 className='h-14 w-25'
+                                                            />
+                                                       </div>
                               <p className={`text-sm mt-3 max-w-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                                    Crafting digital experiences with precision and passion. Let's build something amazing together.
                               </p>
@@ -63,7 +71,7 @@ const Footer = () => {
                                    </h3>
                                    <div className='flex gap-3.5'>
                                         <a
-                                             href="https://github.com"
+                                             href="https://github.com/musazahidtamim3-ai"
                                              target="_blank"
                                              rel="noopener noreferrer"
                                              className={`w-10 h-10 flex items-center justify-center rounded-xl border transition-all duration-300 ${isDark
@@ -74,7 +82,7 @@ const Footer = () => {
                                              <FaGithub size={18} />
                                         </a>
                                         <a
-                                             href="https://linkedin.com"
+                                             href="https://www.linkedin.com/in/jahidul-islam-dev"
                                              target="_blank"
                                              rel="noopener noreferrer"
                                              className={`w-10 h-10 flex items-center justify-center rounded-xl border transition-all duration-300 ${isDark
@@ -85,7 +93,7 @@ const Footer = () => {
                                              <FaLinkedin size={18} />
                                         </a>
                                         <a
-                                             href="https://twitter.com"
+                                             href="https://www.facebook.com/share/19GwUyCVyF/"
                                              target="_blank"
                                              rel="noopener noreferrer"
                                              className={`w-10 h-10 flex items-center justify-center rounded-xl border transition-all duration-300 ${isDark
@@ -93,7 +101,7 @@ const Footer = () => {
                                                        : 'bg-white border-slate-200 text-purple-600 hover:bg-purple-600 hover:text-white hover:border-purple-600 hover:shadow-md'
                                                   }`}
                                         >
-                                             <FaTwitter size={18} />
+                                             <FaFacebook size={18} />
                                         </a>
                                    </div>
                               </div>

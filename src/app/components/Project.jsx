@@ -4,7 +4,7 @@ import ProjectContent from './ProjectClientSection';
 const Project = async () => {
      let projects = [];
      try {
-          const res = await fetch("http://localhost:3000/project.json");
+          const res = await fetch("https://jahid-dev-portfolio.vercel.app/project.json");
           if (!res.ok) throw new Error('Failed to fetch projects');
           projects = await res.json();
      } catch (error) {
