@@ -75,14 +75,14 @@ const ProjectContent = ({ projects }) => {
                                                   {/* Hover Icons Overlay */}
                                                   <div className='absolute inset-0 bg-slate-950/70 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4'>
                                                        {project.liveLink && (
-                                                            <Link
+                                                            <a
                                                                  href={project.liveLink}
                                                                  target="_blank"
                                                                  title="Live Preview"
                                                                  className='p-3 bg-purple-600 hover:bg-purple-500 text-white rounded-full hover:scale-110 transition-all shadow-lg'
                                                             >
                                                                  <IoIosRocket size={20} />
-                                                            </Link>
+                                                            </a>
                                                        )}
 
                                                        {(project.githubClient || project.githubLink) && (

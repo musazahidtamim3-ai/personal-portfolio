@@ -64,7 +64,7 @@
                "MongoDB"
           ],
           "briefDescription": "Doc Appoint is a modern healthcare portal connecting patients with specialized doctors. Users can search specialists, book real-time appointment of the doctors. They can edit and delete their appointment",
-          "liveLink": "https://doc-appoint.vercel.app",
+          "liveLink": "https://doc-appoint-indol.vercel.app/",
           "githubClient": "https://github.com/musazahidtamim3-ai/doc-appoint-client",
           "challenges": [
                "Make sure that user can edit or delete their appointment.",

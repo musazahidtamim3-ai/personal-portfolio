@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Keyframe Animations */
+/* --- Keyframe Animations --- */
 @keyframes float {
      0% {
           transform: translateY(0px);
@@ -20,16 +20,14 @@
      animation: float 6s ease-in-out infinite;
 }
 
-/* Fix Sticky Positioning & Horizontal Overflow */
+/* --- Base Layout & Overflow Fixes --- */
 html,
 body {
      width: 100%;
      overflow-x: clip;
-     /* hidden এর বদলে clip দিলে ডানে-বামে স্ক্রোল হবে না এবং sticky ও কাজ করবে */
+     scroll-behavior: smooth;
 }
 
-main,
-section,
-div {
-     max-width: 100%;
+body {
+     min-height: 100vh;
 }

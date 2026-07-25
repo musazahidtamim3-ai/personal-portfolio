@@ -21,7 +21,6 @@ const ProjectDetails = () => {
                try {
                     setLoading(true);
 
-                    // FIXED: রিলেটিভ পাথ ব্যবহার করা হয়েছে
                     const response = await fetch('/project.json');
 
                     if (!response.ok) {
@@ -30,7 +29,6 @@ const ProjectDetails = () => {
 
                     const data = await response.json();
 
-                    // FIXED: params.id নিশ্চিত হওয়া এবং Type safe তুলনা
                     const projectId = params?.id;
 
                     if (projectId) {
@@ -50,7 +48,6 @@ const ProjectDetails = () => {
           }
      }, [params]);
 
-     // লোডিং স্টেট
      if (loading) {
           return (
                <div className={`min-h-screen flex items-center justify-center ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
@@ -59,7 +56,6 @@ const ProjectDetails = () => {
           );
      }
 
-     // এরর অথবা প্রজেক্ট খুঁজে না পাওয়ার স্টেট
      if (error || !project) {
           return (
                <div className={`min-h-screen flex flex-col items-center justify-center gap-4 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
@@ -144,13 +140,13 @@ const ProjectDetails = () => {
                          initial={{ opacity: 0, y: 20 }}
                          animate={{ opacity: 1, y: 0 }}
                          transition={{ duration: 0.6, delay: 0.1 }}
-                         className={`relative w-full h-[350px] sm:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden border mb-10 ${isDark ? 'border-slate-800 shadow-2xl' : 'border-slate-200 shadow-lg'}`}
+                         className={`relative w-full h-[190px] lg:h-[480px] rounded-2xl overflow-hidden border mb-10 ${isDark ? 'border-slate-800 shadow-2xl' : 'border-slate-200 shadow-lg'}`}
                     >
                          <Image
                               src={project.bannerImage}
                               alt={project.projectName}
                               fill
-                              className='object-cover'
+                              className='object-contain'
                               priority
                          />
                     </motion.div>

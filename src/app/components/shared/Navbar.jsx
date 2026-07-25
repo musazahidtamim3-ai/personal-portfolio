@@ -13,7 +13,7 @@ const Navbar = () => {
 
      useEffect(() => {
           const handleScroll = () => {
-               const sections = ['home', 'about', 'skills', 'projects', 'education'];
+               const sections = ['home', 'about', 'skills', 'projects', 'education', 'blog'];
 
                for (const section of sections) {
                     const element = document.getElementById(section);
@@ -43,7 +43,8 @@ const Navbar = () => {
           { name: 'About', id: 'about' },
           { name: 'Skills', id: 'skills' },
           { name: 'Projects', id: 'projects' },
-          { name: 'Education', id: 'education' }
+          { name: 'Education', id: 'education' },
+          { name: 'Blog', id: 'blog' }
      ];
 
      return (
@@ -56,7 +57,6 @@ const Navbar = () => {
                <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-12'>
                     <div className='flex justify-between items-center py-3 relative'>
 
-                         {/* Left Side: Mobile Menu Icon & Logo (কাছাকাছি রাখার জন্য একসাথে রাখা হয়েছে) */}
                          <div className='flex items-center gap-3 sm:gap-4'>
                               <button
                                    onClick={() => setOpen(!open)}
@@ -128,7 +128,6 @@ const Navbar = () => {
                     </div>
                </div>
 
-               {/* Mobile Sidebar Dropdown (Header এর ঠিক নিচে থেকে সুন্দরভাবে খুলবে) */}
                <div
                     className={`fixed left-0 top-[65px] h-[calc(100vh-65px)] w-64 p-6 shadow-2xl border-r transition-all duration-300 ease-in-out lg:hidden flex flex-col justify-between z-[999] ${isDark ? 'bg-slate-950 border-slate-800' : 'bg-white border-purple-100'
                          } ${open ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'

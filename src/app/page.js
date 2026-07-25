@@ -6,6 +6,7 @@ import Project from "./components/Project";
 import Connect from "./components/Connect";
 import Education from "./components/Education";
 import Footer from "./components/Footer";
+import Blog from "./components/Blog";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Tech />
       <Education />
       <Project />
+      <Blog/>
       <Connect />
       <Footer />
     </div>
