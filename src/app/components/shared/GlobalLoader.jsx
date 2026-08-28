@@ -43,7 +43,7 @@ const GlobalLoader = ({ finishLoading }) => {
                          transition={{ duration: 0.3 }}
                          className="text-center space-y-2"
                     >
-                         <h2 className="text-3xl font-black tracking-widest uppercase bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent">
+                         <h2 className="text-3xl font-black tracking-widest uppercase bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
                               Jahidul Islam
                          </h2>
                          <p className={`text-[10px] font-bold tracking-[0.3em] uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'
@@ -58,7 +58,7 @@ const GlobalLoader = ({ finishLoading }) => {
                               }`}>
                               {/* Glowing Moving Progress Line */}
                               <motion.div
-                                   className="h-full bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 rounded-full relative"
+                                   className="h-full bg-linear-to-r from-purple-500  to-indigo-500 rounded-full relative"
                                    style={{ width: `${progress}%` }}
                               >
                                    {/* Leading Edge Glow Bead */}
@@ -72,7 +72,7 @@ const GlobalLoader = ({ finishLoading }) => {
                                    }`}>
                                    LOADING
                               </span>
-                              <span className="text-xs font-mono font-extrabold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                              <span className="text-xs font-mono font-extrabold bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
                                    {progress}%
                               </span>
                          </div>

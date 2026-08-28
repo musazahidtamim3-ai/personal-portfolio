@@ -13,8 +13,7 @@ const Blog = () => {
           {
                id: 1,
                title: "Have You Ever Wondered How the Internet Really Works ?",
-               description: "We all search on Google, watch videos on YouTube, use Facebook or send messages to our friends daily.But do you ever think, how a lot of data reaches your mobile or computer by just clicking a button?Mainly, the Internet is a huge network which connects millions of devices across the world.It does notmatter where you are, you can see information about anything in just a few seconds.Suppose, you want to send a letter to your friend’s home.You write your friend’s address on anenvelope.Then the postal service delivers it through several post offices.The Internet also works likethat.When you want to open a website, your device sends a request to that website’s server throughseveral routers and networks.The server understands the request and sends necessary data to yourdevice.",
-               image: "/blog.png",
+               description: "We all search on Google, watch videos on YouTube, use Facebook or send messages to our friends daily.But do you ever think, how a lot of data reaches your mobile or computer by just clicking a button?Mainly, the Internet is a huge network which connects millions of devices across the world.It does notmatter where you are, you can see information about anything in just a few seconds.Suppose, you want to send a letter to your friend’s home.You write your friend’s address on anenvelope.Then the postal service delivers it through several post offices.",
           }
      ];
 
@@ -29,8 +28,8 @@ const Blog = () => {
                     {/* Section Header */}
                     <div className='text-center mb-12 space-y-3'>
                          <span className={`inline-block font-semibold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full border shadow-sm ${isDark
-                                   ? 'text-purple-400 bg-purple-500/10 border-purple-500/20'
-                                   : 'text-purple-700 bg-purple-100 border-purple-200'
+                              ? 'text-purple-400 bg-purple-500/10 border-purple-500/20'
+                              : 'text-purple-700 bg-purple-100 border-purple-200'
                               }`}>
                               Articles & News
                          </span>
@@ -39,7 +38,7 @@ const Blog = () => {
                          </h2>
                     </div>
 
-                    {/* Horizontal Card */}
+                    {/* Card */}
                     <div className="w-full">
                          {blogs.map((blog) => (
                               <motion.div
@@ -48,36 +47,20 @@ const Blog = () => {
                                    whileInView={{ opacity: 1, y: 0 }}
                                    viewport={{ once: true }}
                                    transition={{ duration: 0.5 }}
-                                   style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-                                   className={`group p-3 md:p-4 rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl w-full ${isDark
-                                             ? 'bg-slate-900/60 border-slate-800 hover:border-purple-500/50'
-                                             : 'bg-white border-slate-200 hover:border-purple-300 shadow-lg'
+                                   className={`group flex flex-col md:flex-row items-stretch p-3 md:p-4 rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl w-full ${isDark
+                                        ? 'bg-slate-900/60 border-slate-800 hover:border-purple-500/50'
+                                        : 'bg-white border-slate-200 hover:border-purple-300 shadow-lg'
                                         }`}
                               >
-                                   {/* Left Side: Image Container with Padding & Rounded Corners */}
-                                   <div
-                                        style={{ width: '35%', minHeight: '240px', position: 'relative', flexShrink: 0 }}
-                                        className="overflow-hidden rounded-2xl"
-                                   >
-                                        <Image
-                                             src={blog.image}
-                                             alt={blog.title}
-                                             fill
-                                             className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                        />
-                                   </div>
 
-                                   {/* Right Side: Content Container */}
-                                   <div
-                                        style={{ width: '75%' }}
-                                        className="p-4 md:p-6 flex flex-col justify-between space-y-4"
-                                   >
+                                   {/* Content: stacks under image on mobile, sits beside it from md up */}
+                                   <div className="w-full md:w-[64%] p-4 md:p-6 flex flex-col justify-between gap-4">
                                         <div className="space-y-3">
                                              <h3 className={`text-lg lg:text-2xl font-bold leading-snug transition-colors duration-300 group-hover:text-purple-400 ${isDark ? 'text-slate-100' : 'text-slate-800'
                                                   }`}>
                                                   {blog.title}
                                              </h3>
-                                             <p className={`text-xs md:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'
+                                             <p className={`text-xs md:text-sm leading-relaxed line-clamp-3 md:line-clamp-none ${isDark ? 'text-slate-400' : 'text-slate-600'
                                                   }`}>
                                                   {blog.description}
                                              </p>

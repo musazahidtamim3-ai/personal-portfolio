@@ -13,7 +13,7 @@ const Navbar = () => {
 
      useEffect(() => {
           const handleScroll = () => {
-               const sections = ['home', 'about', 'skills', 'projects', 'education', 'blog'];
+               const sections = ['home', 'about', 'skills', 'education', 'projects', 'certificates', 'blog'];
 
                for (const section of sections) {
                     const element = document.getElementById(section);
@@ -44,6 +44,7 @@ const Navbar = () => {
           { name: 'Skills', id: 'skills' },
           { name: 'Projects', id: 'projects' },
           { name: 'Education', id: 'education' },
+          { name: 'Certificates', id: 'certificates' },
           { name: 'Blog', id: 'blog' }
      ];
 
@@ -119,7 +120,7 @@ const Navbar = () => {
                               {/* Desktop CTA Button */}
                               <button
                                    onClick={() => scrollToSection('contact')}
-                                   className='hidden lg:flex items-center gap-2 px-5 py-2.5 text-white border border-purple-500/20 rounded-xl font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-purple-500 to-indigo-500 hover:bg-purple-500 hover:border-transparent hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300'
+                                   className='hidden lg:flex items-center gap-2 px-5 py-2.5 text-white border border-purple-500/20 rounded-xl font-bold text-xs uppercase tracking-wider bg-linear-to-r from-purple-500 to-indigo-500 hover:bg-purple-500 hover:border-transparent hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300'
                               >
                                    <IoMailOutline className='w-4 h-4' /> Contact me
                               </button>

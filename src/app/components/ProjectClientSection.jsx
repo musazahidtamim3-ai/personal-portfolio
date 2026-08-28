@@ -16,15 +16,9 @@ const ProjectContent = ({ projects }) => {
                className={`w-full py-16 lg:py-28 relative overflow-hidden transition-colors duration-500 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
                     }`}
           >
-               <div className={`absolute -top-10 -right-10 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none transition-all duration-500 ${isDark ? 'bg-purple-600/20' : 'bg-purple-400/25'
-                    }`} />
+               
 
-               <div className={`absolute -bottom-10 -left-10 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none transition-all duration-500 ${isDark ? 'bg-indigo-600/20' : 'bg-purple-300/35'
-                    }`} />
-
-               {/* 💜 Center Soft Ambient Glow */}
-               <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full blur-[180px] pointer-events-none ${isDark ? 'bg-purple-900/10' : 'bg-purple-200/40'
-                    }`} />
+               
 
                <div className='max-w-7xl mx-auto px-6 lg:px-12 relative z-10'>
 

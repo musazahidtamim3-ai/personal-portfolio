@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from '../ThemeContext'; // আপনার থিম ফাইলের সঠিক পাথ দিন
+import { useTheme } from '../ThemeContext';
 
 const Connect = () => {
      const { isDark } = useTheme();

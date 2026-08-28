@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import { FaCircleDot } from 'react-icons/fa6';
 import { GoDownload } from 'react-icons/go';
 import { IoMailOutline } from 'react-icons/io5';
@@ -141,14 +141,14 @@ const Hero = () => {
 
                               <button
                                    onClick={() => scrollToSection('contact')}
-                                        className={`px-6 py-3.5 border font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2 text-sm uppercase tracking-wider ${isDark
-                                             ? 'bg-slate-900/60 border-slate-800 hover:border-purple-500/50 text-slate-200 hover:text-purple-300'
-                                             : 'bg-white border-slate-300 hover:border-purple-400 text-slate-700 hover:text-purple-600'
-                                             }`}
-                                   >
-                                        <IoMailOutline className='w-4 h-4' />
-                                        Contact Me
-                                   </button>
+                                   className={`px-6 py-3.5 border font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2 text-sm uppercase tracking-wider ${isDark
+                                        ? 'bg-slate-900/60 border-slate-800 hover:border-purple-500/50 text-slate-200 hover:text-purple-300'
+                                        : 'bg-white border-slate-300 hover:border-purple-400 text-slate-700 hover:text-purple-600'
+                                        }`}
+                              >
+                                   <IoMailOutline className='w-4 h-4' />
+                                   Contact Me
+                              </button>
                          </motion.div>
 
                          <motion.div variants={itemVariants} className='flex items-center gap-4 mt-8 border-slate-800/20'>
