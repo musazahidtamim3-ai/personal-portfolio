@@ -27,9 +27,9 @@ const Certificates = () => {
                image: "/certificate.png",
                skills: ["React.js", "Next.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
                highlights: [
-                    "Mastered Full-stack MERN Development",
+                    "Mastered MERN Stack Web Development",
                     "Built 12+ Industry Standard Web Applications",
-                    "Select for SCIC"
+                    "Selected for SCIC"
                ]
           }
      ];
@@ -41,7 +41,7 @@ const Certificates = () => {
      return (
           <section
                id="certificates"
-               className={`w-full px-4 lg:px-6 py-16 sm:py-24 transition-colors duration-300 relative overflow-hidden ${isDark ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-900"
+               className={`w-full px-6 lg:px-12 py-16 sm:py-24 transition-colors duration-300 relative overflow-hidden ${isDark ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-900"
                     }`}
           >
                <div
@@ -49,7 +49,7 @@ const Certificates = () => {
                          }`}
                />
 
-               <div className="max-w-6xl mx-auto relative z-10">
+               <div className="max-w-7xl px-6 mx-auto relative z-10">
                     <motion.div
                          initial={{ opacity: 0, y: 15 }}
                          whileInView={{ opacity: 1, y: 0 }}

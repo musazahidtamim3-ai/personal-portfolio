@@ -13,7 +13,7 @@ const BlogDetails = () => {
 
      const blogData = {
           title: "Have You Ever Wondered How the Internet Really Works?",
-          author: "Jahid",
+          author: "MD. Jahidul Islam",
           date: "Jul 25, 2026",
           image: "/blog.png",
      };
@@ -21,7 +21,7 @@ const BlogDetails = () => {
      return (
           <main className={`min-h-screen py-12 lg:py-20 transition-colors duration-500 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
                }`}>
-               <div className="mx-auto px-6" style={{ maxWidth: '64rem' }}>
+               <div className="max-w-7xl mx-auto px-6">
 
                     {/* Back Button */}
                     <Link
@@ -47,7 +47,7 @@ const BlogDetails = () => {
                     </div>
 
                     {/* Cover Image Container */}
-                    <div className={`w-full rounded-2xl overflow-hidden mb-10 shadow-xl border flex justify-center items-center ${isDark ? 'bg-slate-900/50 border-slate-800' : 'bg-slate-100 border-slate-200'
+                    <div className={`w-full sm:display-none rounded-2xl overflow-hidden mb-10 shadow-xl border flex justify-center items-center ${isDark ? 'bg-slate-900/50 border-slate-800' : 'bg-slate-100 border-slate-200'
                          }`}>
                          <Image
                               src={blogData.image}
@@ -55,7 +55,7 @@ const BlogDetails = () => {
                               width={800}
                               height={450}
                               priority
-                              className="w-full h-35 object-cover rounded-2xl"
+                              className="w-full h-full object-cover rounded-2xl"
                          />
                     </div>
 

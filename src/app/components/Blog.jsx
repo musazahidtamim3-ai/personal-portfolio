@@ -1,10 +1,9 @@
 'use client'
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useTheme } from '../ThemeContext';
-import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
+import { FaArrowRight} from 'react-icons/fa';
 
 const Blog = () => {
      const { isDark } = useTheme();
@@ -23,7 +22,7 @@ const Blog = () => {
                className={`w-full py-16 lg:py-24 transition-colors duration-500 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
                     }`}
           >
-               <div className="max-w-5xl mx-auto px-6 lg:px-12">
+               <div className="max-w-7xl mx-auto px-6 ">
 
                     {/* Section Header */}
                     <div className='text-center mb-12 space-y-3'>
@@ -47,14 +46,14 @@ const Blog = () => {
                                    whileInView={{ opacity: 1, y: 0 }}
                                    viewport={{ once: true }}
                                    transition={{ duration: 0.5 }}
-                                   className={`group flex flex-col md:flex-row items-stretch p-3 md:p-4 rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl w-full ${isDark
+                                   className={`group flex flex-col md:flex-row  p-3 md:p-4 rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl w-full ${isDark
                                         ? 'bg-slate-900/60 border-slate-800 hover:border-purple-500/50'
                                         : 'bg-white border-slate-200 hover:border-purple-300 shadow-lg'
                                         }`}
                               >
 
                                    {/* Content: stacks under image on mobile, sits beside it from md up */}
-                                   <div className="w-full md:w-[64%] p-4 md:p-6 flex flex-col justify-between gap-4">
+                                   <div className="w-full p-4 md:p-6 flex flex-col justify-between gap-4">
                                         <div className="space-y-3">
                                              <h3 className={`text-lg lg:text-2xl font-bold leading-snug transition-colors duration-300 group-hover:text-purple-400 ${isDark ? 'text-slate-100' : 'text-slate-800'
                                                   }`}>
@@ -62,7 +61,7 @@ const Blog = () => {
                                              </h3>
                                              <p className={`text-xs md:text-sm leading-relaxed line-clamp-3 md:line-clamp-none ${isDark ? 'text-slate-400' : 'text-slate-600'
                                                   }`}>
-                                                  {blog.description}
+                                                  {blog.description}....
                                              </p>
                                         </div>
 

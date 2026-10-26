@@ -64,13 +64,50 @@ const About = () => {
                          className={` rounded-2xl text-sm sm:text-base leading-relaxed ${isDark ? ' text-slate-300' : ' text-slate-700'
                               }`}
                     >
-                         <p className='text-justify sm:text-left space-y-4'>
-                              Hello! I am <span className='font-bold text-purple-500 dark:text-purple-400'>MD. Jahidul Islam</span>, a dedicated web developer based in Feni, Bangladesh. Currently, I am studying in <span className='text-purple-500 font-bold'>computer science and technology</span> at Feni Polytechnic Institute. My programming journey began with a strong curiosity to understand how software applications and complex web platforms operate seamlessly behind the scenes. What started as basic experimentation with foundational coding concepts quickly turned into a genuine passion for creating scalable, modern web solutions.
+
+                         <p className="text-justify sm:text-left space-y-4">
+                              Hello! I'm{" "}
+                              <span className="font-bold text-purple-500">
+                                   MD. Jahidul Islam
+                              </span>
+                              , a web developer from Feni, Bangladesh, with a background in <span className="font-semibold text-purple-500">
+                                   Computer Science and Technology
+                              </span> from Feni Polytechnic Institute.
+                              My journey into web development started with curiosity about how
+                              websites work, but it gradually grew into a passion for building
+                              useful, interactive, and well-structured web applications.
+
                               <br /><br />
-                              In my daily workflow, I specialize in <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>Full Stack Web Development</span>—building end-to-end applications that prioritize functionality and performant user experiences. I deeply enjoy diving into algorithmic logic through <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>Problem Solving</span>, as well as crafting clean, responsive, and aesthetically pleasing <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>UI/UX Designs</span>.
+
+                              I primarily work with the <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>
+                                   MERN Stack 
+                              </span> and modern web technologies, including React, Next.js, TypeScript,
+                              Node.js, Express.js, and MongoDB. Through hands-on projects, I've
+                              explored REST APIs, authentication, database integration, and
+                              responsive UI development. I enjoy turning ideas into working
+                              products and learning how different parts of an application fit
+                              together. I'm also exploring Prisma and PostgreSQL to broaden my
+                              backend development skills.
+
                               <br /><br />
-                              As a professional, I define myself as a <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>curious learner</span>, an effective <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>team player</span>, a <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>fast learner</span>, and a highly <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>self-motivated engineer</span> who thrives on solving real-world technological challenges. When I am away from my code editor, I like to recharge my mind by <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>reading books</span>, <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>playing football</span>, and continuously <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>learning new technologies</span> to stay updated with industry trends.
+
+                              Beyond writing code, I believe in{" "}
+                              <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>
+                                   learning by building
+                              </span>
+                              , taking responsibility, and improving through feedback and mistakes.
+                              I enjoy solving technical challenges, collaborating with others, and
+                              finding practical solutions rather than simply making things work on
+                              the surface. Currently, I'm continuing to strengthen my development
+                              skills through hands-on work, web development training, and personal
+                              projects, with the goal of becoming a{" "}
+                              <span className={`font-semibold ${isDark ? 'text-purple-300' : 'text-purple-600'}`}>
+                                   well-rounded Full-Stack Developer
+                              </span>
+                              . Outside coding, I enjoy playing football or Cricket, spending time with friends,
+                              and learning English to improve my communication skills.
                          </p>
+
                     </motion.div>
 
                     {/* 2-Column Split Information Card */}

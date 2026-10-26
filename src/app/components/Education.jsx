@@ -54,7 +54,7 @@ const EducationTimeline = () => {
      return (
           <section id='education' className={`w-full py-16 lg:py-24 relative overflow-hidden transition-colors duration-300 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
                }`}>
-               <div className='max-w-6xl mx-auto px-6 lg:px-12 relative z-10'>
+               <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
                     {/* Ambient Background Glow */}
                     <div className={`absolute top-1/3 right-0 w-80 h-80 rounded-full blur-[130px] pointer-events-none ${isDark ? 'bg-purple-500/10' : 'bg-purple-300/20'

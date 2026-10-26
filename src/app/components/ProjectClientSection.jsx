@@ -20,7 +20,7 @@ const ProjectContent = ({ projects }) => {
 
                
 
-               <div className='max-w-7xl mx-auto px-6 lg:px-12 relative z-10'>
+               <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
                     {/* Section Header */}
                     <div className='mb-12 lg:mb-16 text-left lg:text-center space-y-3'>

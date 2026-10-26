@@ -10,10 +10,10 @@ import { useTheme } from '../ThemeContext';
 import Link from 'next/link';
 
 const roles = [
-     "Full Stack Developer",
+     "MERN Stack Developer",
      "React Specialist",
      "Next.js Developer",
-     "Node.js Developer"
+     "UI specialist"
 ];
 
 const Hero = () => {
@@ -69,6 +69,8 @@ const Hero = () => {
           { icon: <FaFacebook />, link: "https://www.facebook.com/share/19GwUyCVyF/" },
      ];
 
+     const developerImage = isDark ? "/developer-dark.png" : "/developer.png";
+
      return (
           <section
                id='home'
@@ -78,7 +80,7 @@ const Hero = () => {
                <div className='absolute top-12 left-10 w-96 h-96 bg-purple-500/15 rounded-full blur-[130px] pointer-events-none z-0'></div>
                <div className='absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-[130px] pointer-events-none z-0'></div>
 
-               <div className='max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 lg:gap-10 px-6 lg:px-12 justify-between items-center pt-8 pb-16 lg:py-20 relative z-10'>
+               <div className='max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 lg:gap-10 px-6 justify-between items-center pt-8 pb-16 lg:py-20 relative z-10'>
 
                     {/* Left Content */}
                     <motion.div
@@ -180,7 +182,7 @@ const Hero = () => {
                          {/* Ambient Glow */}
                          <div className='absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-indigo-500/20 rounded-full blur-[70px] group-hover:from-purple-500/30 transition-all duration-700 pointer-events-none'></div>
 
-                         {/* 1. Geometric Outer Rotator (Rotated Rounded Square) */}
+                         {/* 1. Geometric Outer Rotator */}
                          <motion.div
                               className={`absolute w-72 sm:w-88 lg:w-[410px] h-72 sm:h-88 lg:h-[410px] rounded-[45px] sm:rounded-[55px] border border-dashed transition-colors duration-500 pointer-events-none ${isDark ? 'border-purple-500/25' : 'border-purple-400/35'
                                    }`}
@@ -188,7 +190,7 @@ const Hero = () => {
                               transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
                          />
 
-                         {/* 2. Geometric Hexagon/Diamond Decorative Accent (Top Right) */}
+                         {/* 2. Geometric Hexagon/Diamond Decorative Accent */}
                          <motion.div
                               className={`absolute -top-3 -right-3 w-8 h-8 rounded-lg border rotate-45 pointer-events-none backdrop-blur-md hidden sm:block ${isDark ? 'border-purple-400/30 bg-purple-900/20' : 'border-purple-300 bg-purple-100/50'
                                    }`}
@@ -196,7 +198,7 @@ const Hero = () => {
                               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                          />
 
-                         {/* 3. Main Modern Squircle Frame (Rounded Polygon Look) */}
+                         {/* 3. Main Modern Squircle Frame */}
                          <motion.div
                               className="relative w-64 sm:w-80 lg:w-[380px] h-64 sm:h-80 lg:h-[380px] rounded-[40px] sm:rounded-[50px] p-[3px] bg-gradient-to-br from-purple-200 via-indigo-500/40 to-pink-500/30 shadow-[0_0_50px_rgba(139,92,246,0.15)] overflow-hidden"
                               animate={{ y: [0, -8, 0] }}
@@ -206,12 +208,14 @@ const Hero = () => {
 
                                    <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(139,92,246,0.2)_0%,transparent_60%)]'></div>
 
+                                   {/* Theme অনু-যায়ী ডাইনামিক ছবি রেন্ডার করা */}
                                    <Image
-                                        src="/developer.png"
+                                        key={developerImage} // থিম পরিবর্তনের সময় স্মুথ ট্রানজিশনের জন্য
+                                        src={developerImage}
                                         alt="Mohammed Jahidul Islam"
                                         height={500}
                                         width={500}
-                                        className="object-cover translate-y-2  origin-bottom drop-shadow-[0_0_25px_rgba(168,85,247,0.45)]"
+                                        className="object-cover origin-bottom drop-shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-opacity duration-300"
                                         priority
                                    />
                               </div>

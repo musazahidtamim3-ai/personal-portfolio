@@ -61,7 +61,7 @@ const Connect = () => {
                <div className={`absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none ${isDark ? 'bg-purple-900/20' : 'bg-purple-200/50'
                     }`} />
 
-               <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+               <div className="max-w-7xl mx-auto px-6 relative z-10">
 
                     {/* Section Header */}
                     <div className='text-left lg:text-center mb-12 lg:mb-16 space-y-3'>
@@ -82,7 +82,7 @@ const Connect = () => {
                          whileInView={{ opacity: 1, y: 0 }}
                          viewport={{ once: true }}
                          transition={{ duration: 0.6, ease: "easeOut" }}
-                         className={`max-w-3xl mx-auto group relative p-[1.5px] rounded-2xl overflow-hidden transition-all duration-300 shadow-xl ${isDark ? 'bg-slate-900/60' : 'bg-white'
+                         className={`max-w-7xl mx-auto group relative p-[1.5px] rounded-2xl overflow-hidden transition-all duration-300 shadow-xl ${isDark ? 'bg-slate-900/60' : 'bg-white'
                               }`}
                     >
                          {/* ROTATING BORDER LIGHT (Theme Dynamic) */}

@@ -72,7 +72,7 @@ const ProjectDetails = () => {
 
      return (
           <main className={`min-h-screen py-12 lg:py-20 transition-colors duration-300 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
-               <div className='max-w-5xl mx-auto px-6 lg:px-12 relative z-10'>
+               <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
                     {/* Ambient Glow */}
                     <div className={`absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full blur-[160px] pointer-events-none ${isDark ? 'bg-purple-500/10' : 'bg-purple-300/30'}`} />

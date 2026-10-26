@@ -6,7 +6,7 @@ import { DiMongodb, DiCss3, DiHtml5 } from 'react-icons/di';
 import { FaReact, FaNodeJs, FaGitAlt, FaGithub } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
-import { SiExpress, SiTypescript, SiPostman, SiFigma } from 'react-icons/si';
+import { SiExpress, SiTypescript, SiFigma } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
 
 const Tech = () => {
@@ -43,7 +43,7 @@ const Tech = () => {
      return (
           <section id='skills' className={`w-full py-16 lg:py-24 relative overflow-hidden transition-colors duration-300 ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
                }`}>
-               <div className='max-w-6xl mx-auto px-6 lg:px-12 relative z-10'>
+               <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
                     {/* Ambient Background Glow */}
                     <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[150px] pointer-events-none ${isDark ? 'bg-purple-500/10' : 'bg-purple-300/30'
